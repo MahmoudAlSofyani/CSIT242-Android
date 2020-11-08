@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".Activities.LoginActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:textAlignment="center"/>
 
     <EditText
-        android:id="@+id/mainActivity_email_EditText"
+        android:id="@+id/loginActivity_email_EditText"
         android:layout_width="match_parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -24,7 +24,7 @@
         android:textAlignment="center"/>
 
     <EditText
-        android:id="@+id/mainActivity_password_EditText"
+        android:id="@+id/loginActivity_password_EditText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
@@ -37,8 +37,17 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Login"
+        android:onClick="loginInAsExistingUser"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:onClick="goToSignUpActivity"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Sign up"/>
 
 </LinearLayout>
