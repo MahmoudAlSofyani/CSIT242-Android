@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -53,14 +54,14 @@ public class SignupActivity extends Activity {
         String errorMessage_mismatchPasswords = "please make sure passwords match";
 
         if(email.isEmpty() || emailConfirm.isEmpty() || password.isEmpty() || passwordConfirm.isEmpty()) {
-            errorMessage_TextView.setText(errorMessage_hasEmptyFields);
+            Toast.makeText(this, errorMessage_hasEmptyFields, Toast.LENGTH_LONG).show();
             return false;
         } else {
             if(!email.equals(emailConfirm)) {
-                errorMessage_TextView.setText(errorMessage_mismatchEmails);
+                Toast.makeText(this, errorMessage_mismatchEmails, Toast.LENGTH_LONG).show();
                 return false;
             } else if(!password.equals(passwordConfirm)) {
-                errorMessage_TextView.setText(errorMessage_mismatchPasswords);
+                Toast.makeText(this, errorMessage_mismatchPasswords, Toast.LENGTH_LONG).show();
                 return false;
             } else {
                 return true;
