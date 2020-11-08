@@ -64,8 +64,6 @@ public class SignupActivity extends Activity {
         }
     }
 
-
-
     public Boolean validateFields() {
 
         String email = email_EditText.getText().toString();
