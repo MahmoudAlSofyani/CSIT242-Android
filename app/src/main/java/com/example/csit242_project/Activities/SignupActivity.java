@@ -56,8 +56,9 @@ public class SignupActivity extends Activity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()) {
                         System.out.println("User was created successfully!");
+                        //go to next activity
                     } else {
-                        System.out.println("User was not created");
+                        Toast.makeText(SignupActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });

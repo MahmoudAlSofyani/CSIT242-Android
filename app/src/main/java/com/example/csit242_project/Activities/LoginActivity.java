@@ -40,9 +40,7 @@ public class LoginActivity extends Activity {
         FirebaseUser currentUser = auth.getCurrentUser();
     }
 
-
     public void loginInAsExistingUser(View view) {
-
         if(validateFields()) {
             String email = email_EditText.getText().toString();
             String password = password_EditText.getText().toString();
@@ -55,7 +53,6 @@ public class LoginActivity extends Activity {
                         System.out.println("Logged in successfully");
                         //Go to the dashboard activity
                     } else {
-//                        Toast.makeText(this, errorMessage_hasEmptyFields, Toast.LENGTH_LONG).show();
                         Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -77,10 +74,8 @@ public class LoginActivity extends Activity {
         }
     }
 
-
     public void goToSignUpActivity(View view) {
         Intent goToSignUpActivity_Intent = new Intent(this, SignupActivity.class);
         startActivity(goToSignUpActivity_Intent);
     }
-
 }
