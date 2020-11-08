@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "760628545685",
+    "firebase_url": "https://csit242-project.firebaseio.com",
+    "project_id": "csit242-project",
+    "storage_bucket": "csit242-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760628545685:android:b2fb5c6f24703123a0f39c",
+        "android_client_info": {
+          "package_name": "com.example.csit242_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760628545685-oaedo0q0v9j3grmq44v525p7si6afhq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz640jGmMCJ5IJk3JOPNkhfHXV8a8y2rU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760628545685-oaedo0q0v9j3grmq44v525p7si6afhq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
