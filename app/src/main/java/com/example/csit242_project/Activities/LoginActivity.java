@@ -51,13 +51,18 @@ public class LoginActivity extends Activity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()) {
                         System.out.println("Logged in successfully");
-                        //Go to the dashboard activity
+                        goToMainDashboardActivity();
                     } else {
                         Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
+    }
+
+    public void goToMainDashboardActivity() {
+        Intent intent = new Intent(this, MainDashboardActivity.class);
+        startActivity(intent);
     }
 
     public Boolean validateFields() {
@@ -73,6 +78,7 @@ public class LoginActivity extends Activity {
             return true;
         }
     }
+
 
     public void goToSignUpActivity(View view) {
         Intent goToSignUpActivity_Intent = new Intent(this, SignupActivity.class);
