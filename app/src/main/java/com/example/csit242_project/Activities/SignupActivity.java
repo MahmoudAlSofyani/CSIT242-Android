@@ -7,12 +7,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.csit242_project.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import Models.UserAccount;
 
 public class SignupActivity extends Activity {
 
+    private FirebaseAuth auth;
 
     EditText email_EditText;
     EditText emailConfirm_EditText;
@@ -25,6 +34,7 @@ public class SignupActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_activity);
 
+        auth = FirebaseAuth.getInstance();
         email_EditText = findViewById(R.id.signupActivity_email_EditText);
         emailConfirm_EditText = findViewById(R.id.signupActivity_emailConfirm_EditText);
         password_EditText = findViewById(R.id.signupActivity_password_EditText);
@@ -32,13 +42,26 @@ public class SignupActivity extends Activity {
         errorMessage_TextView = findViewById(R.id.signupActivity_errorMessage_TextView);
     }
 
+
     public void createNewUser(View view) {
 
         Boolean areFieldsValidated;
         areFieldsValidated = validateFields();
-
-        System.out.println("Are Fields Validated?: " + areFieldsValidated);
-
+        if(areFieldsValidated){
+            String email = email_EditText.getText().toString();
+            String password = password_EditText.getText().toString();
+            UserAccount newUser = new UserAccount(email, password);
+            auth.createUserWithEmailAndPassword(newUser.getEmail(), newUser.getPassword()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()) {
+                        System.out.println("User was created successfully!");
+                    } else {
+                        System.out.println("User was not created");
+                    }
+                }
+            });
+        }
     }
 
 
