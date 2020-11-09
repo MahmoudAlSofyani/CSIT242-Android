@@ -4,50 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:background="#000000"
+    android:orientation="vertical"
     tools:context=".Activities.LoginActivity">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
         android:text="CSIT242 Project"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
-    <EditText
-        android:id="@+id/loginActivity_email_EditText"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_height="50dp"
-        android:hint="Email"
-        android:textAlignment="center"/>
-
-    <EditText
-        android:id="@+id/loginActivity_password_EditText"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Password"
-        android:textAlignment="center"/>
+        android:hint="Email">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginActivity_email_EditText"
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Login"
-        android:onClick="loginInAsExistingUser"
-        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:onClick="goToSignUpActivity"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="25dp"
-        android:text="Sign up"/>
+        android:hint="Password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginActivity_password_EditText"
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="loginInAsExistingUser"
+        android:text="Login"
+        android:textColor="#ffffff" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:onClick="goToSignUpActivity"
+        android:text="Signup"
+        android:textColor="#ffffff" />
+
 
 </LinearLayout>
