@@ -61,8 +61,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void goToMainDashboardActivity() {
-        Intent intent = new Intent(this, MainDashboardActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, MainDashboardActivity.class);
+//        startActivity(intent);
     }
 
     public Boolean validateFields() {

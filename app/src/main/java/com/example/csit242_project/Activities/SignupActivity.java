@@ -40,7 +40,6 @@ public class SignupActivity extends AppCompatActivity {
         emailConfirm_EditText = findViewById(R.id.signupActivity_emailConfirm_EditText);
         password_EditText = findViewById(R.id.signupActivity_password_EditText);
         passwordConfirm_EditText = findViewById(R.id.signupActivity_passwordConfirm_EditText);
-        errorMessage_TextView = findViewById(R.id.signupActivity_errorMessage_TextView);
     }
 
 
