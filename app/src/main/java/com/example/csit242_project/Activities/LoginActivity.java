@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import Models.UserAccount;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
     EditText email_EditText;

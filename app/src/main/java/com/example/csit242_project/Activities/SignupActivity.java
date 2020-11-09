@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.csit242_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,7 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import Models.UserAccount;
 
-public class SignupActivity extends Activity {
+public class SignupActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
 
