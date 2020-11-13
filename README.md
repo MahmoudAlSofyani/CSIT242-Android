@@ -1,6 +1,6 @@
 # CSIT242 Project
 
-## Functionalities
+## Functionality
 
 ### Suppliers
 
