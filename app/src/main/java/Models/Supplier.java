@@ -48,4 +48,5 @@ public class Supplier {
     public void setSupplierModels(List<SupplierModel> supplierModels) {
         this.supplierModels = supplierModels;
     }
+
 }
