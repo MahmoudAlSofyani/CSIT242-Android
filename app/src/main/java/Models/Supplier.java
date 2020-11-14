@@ -20,6 +20,11 @@ public class Supplier {
         this.supplierModels = supplierModels;
     }
 
+    public Supplier(String supplierName, String supplierCategory) {
+        this.supplierName = supplierName;
+        this.supplierCategory = supplierCategory;
+    }
+
     public String getSupplierName() {
         return supplierName;
     }
