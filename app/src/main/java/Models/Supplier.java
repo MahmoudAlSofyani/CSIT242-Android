@@ -14,7 +14,7 @@ public class Supplier {
     public Supplier() {
     }
 
-    public Supplier(String supplierName, String supplierCategory, List<SupplierModel> supplierModels, String supplierLogoUrl) {
+    public Supplier(String supplierName, String supplierCategory, String supplierLogoUrl, List<SupplierModel> supplierModels) {
         super();
         this.supplierName = supplierName;
         this.supplierCategory = supplierCategory;
