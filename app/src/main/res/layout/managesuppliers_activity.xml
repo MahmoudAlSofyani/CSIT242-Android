@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Manager Suppliers"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suppliers"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#A80000"
+        android:dividerHeight="1.5dp"
+        android:id="@+id/managesuppliersActivity_supplierList_ListView"/>
+
+</LinearLayout>
