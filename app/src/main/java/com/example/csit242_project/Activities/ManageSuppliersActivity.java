@@ -40,8 +40,6 @@ public class ManageSuppliersActivity extends AppCompatActivity {
         Intent intent = getIntent();
         numSuppliers = intent.getIntExtra("NUM_SUPPLIERS", 0);
 
-
-
     }
 
 
