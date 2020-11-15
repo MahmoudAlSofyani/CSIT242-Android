@@ -39,6 +39,9 @@ public class ManageSuppliersActivity extends AppCompatActivity {
         getListOfSuppliers();
         Intent intent = getIntent();
         numSuppliers = intent.getIntExtra("NUM_SUPPLIERS", 0);
+
+
+
     }
 
 
@@ -64,7 +67,7 @@ public class ManageSuppliersActivity extends AppCompatActivity {
         supplier_ListView = (ListView) findViewById(R.id.managesuppliersActivity_supplierList_ListView);
 
         for(int i = 0; i < numSuppliers; i++) {
-            supplierArrayList.add(new Supplier(list.get(i).get("supplierName").toString(), list.get(i).get("supplierCategory").toString()));
+            supplierArrayList.add(new Supplier(list.get(i).get("supplierName").toString(), list.get(i).get("supplierCategory").toString(), list.get(i).get("supplierLogoURL").toString()));
         }
 
         suppliersAdapter = new SuppliersAdapter(this, supplierArrayList);

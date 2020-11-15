@@ -2,6 +2,7 @@ package Adapters;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,10 +23,16 @@ import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
 import com.example.csit242_project.R;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import AsyncTasks.ImageDownloaderTask;
 import Models.Supplier;
 
 public class SuppliersAdapter extends ArrayAdapter<Supplier> {
@@ -33,7 +40,7 @@ public class SuppliersAdapter extends ArrayAdapter<Supplier> {
     Context mContext;
     List<Supplier> supplierList = new ArrayList<>();
 
-    NetworkImageView supplierLogo;
+    ImageView supplierLogo;
     TextView supplierName;
     TextView supplierCategory;
 
@@ -51,7 +58,7 @@ public class SuppliersAdapter extends ArrayAdapter<Supplier> {
             supplierListItem = LayoutInflater.from(mContext).inflate(R.layout.managesuppliers_customrow, parent, false);
         }
 
-        supplierLogo = (NetworkImageView) supplierListItem.findViewById(R.id.managesuppliersActivity_supplierImage_ImageView);
+        supplierLogo = (ImageView) supplierListItem.findViewById(R.id.managesuppliersActivity_supplierImage_ImageView);
         supplierName = (TextView) supplierListItem.findViewById(R.id.managesuppliersActivity_supplierName_TextView);
         supplierCategory = (TextView) supplierListItem.findViewById(R.id.managesuppliersActivity_supplierCategory_TextView);
 
@@ -60,9 +67,14 @@ public class SuppliersAdapter extends ArrayAdapter<Supplier> {
         supplierName.setText(currentSupplier.getSupplierName());
         supplierCategory.setText(currentSupplier.getSupplierCategory());
 
-        // TODO: Get logo and set the image view to that logo. Also need to modify the Supplier class to support this and this is the url to get the logo
-        String url = "https://logo.clearbit.com/" + currentSupplier.getSupplierName().toLowerCase() + ".com";
+        ImageDownloaderTask task = new ImageDownloaderTask();
+        AsyncTask<String, Void, Bitmap> bitmap =  task.execute(currentSupplier.getSupplierLogoURL());
 
+        try {
+            supplierLogo.setImageBitmap(bitmap.get());
+        } catch (ExecutionException | InterruptedException e) {
+            e.printStackTrace();
+        }
         return supplierListItem;
     }
 }

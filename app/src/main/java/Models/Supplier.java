@@ -9,20 +9,23 @@ public class Supplier {
     private String supplierName;
     private String supplierCategory;
     private List<SupplierModel> supplierModels = null;
+    private String supplierLogoURL;
 
     public Supplier() {
     }
 
-    public Supplier(String supplierName, String supplierCategory, List<SupplierModel> supplierModels) {
+    public Supplier(String supplierName, String supplierCategory, List<SupplierModel> supplierModels, String supplierLogoUrl) {
         super();
         this.supplierName = supplierName;
         this.supplierCategory = supplierCategory;
         this.supplierModels = supplierModels;
+        this.supplierLogoURL = supplierLogoUrl;
     }
 
-    public Supplier(String supplierName, String supplierCategory) {
+    public Supplier(String supplierName, String supplierCategory, String supplierLogoURL) {
         this.supplierName = supplierName;
         this.supplierCategory = supplierCategory;
+        this.supplierLogoURL = supplierLogoURL;
     }
 
     public String getSupplierName() {
@@ -48,5 +51,8 @@ public class Supplier {
     public void setSupplierModels(List<SupplierModel> supplierModels) {
         this.supplierModels = supplierModels;
     }
+
+    public String getSupplierLogoURL() { return supplierLogoURL; };
+    public void setSupplierLogoURL(String supplierLogoURL) { this.supplierLogoURL = supplierLogoURL; }
 
 }
