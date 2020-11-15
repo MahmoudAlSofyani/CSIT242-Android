@@ -39,22 +39,25 @@
                 android:text="Number of Suppliers"/>
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/maindashboardActivity_numSuppliers_TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:padding="10dp"
                 android:textColor="#ffffff"
-                android:text="1000"/>
+                android:text="Loading..."
+                />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:onClick="goToManageSuppliers"
                 android:layout_marginBottom="20dp"
                 android:textColor="#ffffff"
-                android:text="View Suppliers" />
+                android:text="Manage Suppliers" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
