@@ -1,10 +1,15 @@
 package Models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Supplier {
+public class Supplier implements Serializable{
 
     private String supplierName;
     private String supplierCategory;
@@ -14,7 +19,7 @@ public class Supplier {
     public Supplier() {
     }
 
-    public Supplier(String supplierName, String supplierCategory, List<SupplierModel> supplierModels, String supplierLogoUrl) {
+    public Supplier(String supplierName, String supplierCategory, String supplierLogoUrl, List<SupplierModel> supplierModels) {
         super();
         this.supplierName = supplierName;
         this.supplierCategory = supplierCategory;
@@ -54,5 +59,6 @@ public class Supplier {
 
     public String getSupplierLogoURL() { return supplierLogoURL; };
     public void setSupplierLogoURL(String supplierLogoURL) { this.supplierLogoURL = supplierLogoURL; }
+
 
 }

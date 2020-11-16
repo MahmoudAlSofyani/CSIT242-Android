@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Supplier Information"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/supplierInformationActivity_supplierName_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        />
+
+    <ListView
+        android:id="@+id/supplierInformationActivity_supplierModels_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+</LinearLayout>
