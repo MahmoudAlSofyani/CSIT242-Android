@@ -42,9 +42,7 @@ public class SupplierModelAdapter extends ArrayAdapter<SupplierModel> {
             StringBuilder colors = new StringBuilder();
             StringBuilder capacities = new StringBuilder();
 
-            System.out.println(currentModel.getModelName());
-            System.out.println(currentModel.getModelColors());
-
+            // TODO: Make this look nicer. Maybe put them in their own listviews?
             for(int i = 0; i < currentModel.getModelColors().size(); i++) {
                 colors.append(currentModel.getModelColors().get(i));
             }
