@@ -5,23 +5,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.example.csit242_project.R;
 import com.google.android.material.textview.MaterialTextView;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import Models.Supplier;
 import Models.SupplierModel;
 
 public class SupplierModelAdapter extends ArrayAdapter<SupplierModel> {
 
     private Context mContext;
-    private List<SupplierModel> modelList = new ArrayList<>();
+    private List<SupplierModel> modelList;
     MaterialTextView modelName_TextView;
     MaterialTextView modelColors_TextView;
     MaterialTextView modelCapacities_TextView;
