@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.csit242_project.R;
+
 import Models.Supplier;
 
 public class SupplierInformationActivity extends AppCompatActivity {
@@ -14,14 +16,10 @@ public class SupplierInformationActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        Bundle bundle = this.getIntent().getExtras();
-        Supplier supplier = null;
-        if(bundle != null) {
-            supplier = (Supplier) bundle.getSerializable("SUPPLIER");
+        Supplier supplier = (Supplier) getIntent().getParcelableExtra("Supplier");
+        if(supplier != null) {
             System.out.println(supplier.getSupplierName());
+            System.out.println(supplier.getSupplierModels().get(0).getModelName());
         }
-
-
     }
 }

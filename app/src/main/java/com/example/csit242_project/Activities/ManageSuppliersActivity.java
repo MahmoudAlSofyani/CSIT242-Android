@@ -42,7 +42,7 @@ public class ManageSuppliersActivity extends AppCompatActivity {
         setContentView(R.layout.managesuppliers_activity);
 
         getListOfSuppliers();
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         numSuppliers = intent.getIntExtra("NUM_SUPPLIERS", 0);
         supplier_ListView = (ListView) findViewById(R.id.managesuppliersActivity_supplierList_ListView);
 
@@ -53,9 +53,12 @@ public class ManageSuppliersActivity extends AppCompatActivity {
                 System.out.println("I WAS CLICKED: " + id);
                 Supplier supplier = listOfSuppliers.get(position).toObject(Supplier.class);
                 // TODO: Pass supplier object with intent to SupplierInformationActivity class
+
+                Intent goToSupplierInformation = new Intent(getApplicationContext(), SupplierInformationActivity.class);
+                goToSupplierInformation.putExtra("Supplier", supplier);
+                startActivity(goToSupplierInformation);
             }
         });
-
     }
 
     public void getListOfSuppliers() {

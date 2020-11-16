@@ -1,10 +1,15 @@
 package Models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SupplierModel {
+public class SupplierModel implements Parcelable {
 
     private String modelName;
     private List<String> modelColors = null;
@@ -18,6 +23,33 @@ public class SupplierModel {
         this.modelName = modelName;
         this.modelColors = modelColors;
         this.modelCapacities = modelCapacities;
+    }
+
+    private SupplierModel(Parcel in) {
+        this.modelName = in.readString();
+
+    }
+
+    public static final Creator<SupplierModel> CREATOR = new Creator<SupplierModel>() {
+        @Override
+        public SupplierModel createFromParcel(Parcel in) {
+            return new SupplierModel(in);
+        }
+
+        @Override
+        public SupplierModel[] newArray(int size) {
+            return new SupplierModel[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(modelName);
     }
 
     public String getModelName() {
@@ -43,4 +75,6 @@ public class SupplierModel {
     public void setModelCapacities(List<String> modelCapacities) {
         this.modelCapacities = modelCapacities;
     }
+
+
 }
