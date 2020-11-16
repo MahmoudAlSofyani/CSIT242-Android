@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Supplier implements Parcelable {
+public class Supplier implements Serializable{
 
     private String supplierName;
     private String supplierCategory;
@@ -31,40 +31,6 @@ public class Supplier implements Parcelable {
         this.supplierName = supplierName;
         this.supplierCategory = supplierCategory;
         this.supplierLogoURL = supplierLogoURL;
-    }
-
-    public Supplier(Parcel in) {
-        this.supplierName = in.readString();
-        this.supplierCategory = in.readString();
-        this.supplierLogoURL = in.readString();
-        this.supplierModels = new ArrayList<>();
-        in.readList(this.supplierModels, SupplierModel.class.getClassLoader());
-    }
-
-
-    public static final Creator<Supplier> CREATOR = new Creator<Supplier>() {
-        @Override
-        public Supplier createFromParcel(Parcel in) {
-            return new Supplier(in);
-        }
-
-        @Override
-        public Supplier[] newArray(int size) {
-            return new Supplier[size];
-        }
-    };
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(supplierName);
-        dest.writeString(supplierCategory);
-        dest.writeString(supplierLogoURL);
-        dest.writeList(supplierModels);
     }
 
     public String getSupplierName() {

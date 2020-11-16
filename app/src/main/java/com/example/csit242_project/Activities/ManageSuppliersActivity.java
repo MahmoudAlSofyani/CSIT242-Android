@@ -55,7 +55,10 @@ public class ManageSuppliersActivity extends AppCompatActivity {
                 // TODO: Pass supplier object with intent to SupplierInformationActivity class
 
                 Intent goToSupplierInformation = new Intent(getApplicationContext(), SupplierInformationActivity.class);
-                goToSupplierInformation.putExtra("Supplier", supplier);
+
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("Supplier", supplier);
+                goToSupplierInformation.putExtras(bundle);
                 startActivity(goToSupplierInformation);
             }
         });
