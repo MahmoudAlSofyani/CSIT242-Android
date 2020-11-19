@@ -12,6 +12,7 @@ import com.example.csit242_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -32,6 +33,7 @@ public class MainDashboardActivity extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+        bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
 
         getSupplierCount();
     }
@@ -40,23 +42,23 @@ public class MainDashboardActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch(item.getItemId()) {
-                case R.id.main_menu_item1: {
+                case R.id.bottomNavigation_menu_expenses: {
                     System.out.println("Item 1 was clicked");
                     break;
                 }
-                case R.id.main_menu_item2: {
+                case R.id.bottomNavigation_menu_home: {
                     System.out.println("Item 2 was clicked");
                     break;
                 }
-                case R.id.main_menu_item3: {
+                case R.id.bottomNavigation_menu_statistics: {
                     System.out.println("Item 3 was clicked");
                     break;
                 }
-                case R.id.main_menu_item4: {
+                case R.id.bottomNavigation_menu_suppliers: {
                     System.out.println("Item 4 was clicked");
                     break;
                 }
-                case R.id.main_menu_item5: {
+                case R.id.bottomNavigation_menu_transactions: {
                     System.out.println("Item 5 was clicked");
                     break;
                 }
