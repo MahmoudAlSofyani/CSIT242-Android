@@ -25,6 +25,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#171d23"
             android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
@@ -68,6 +69,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#171d23"
             android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
@@ -131,7 +133,9 @@
         android:layout_height="fill_parent">
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
-            android:background="#000000"
+            android:background="@android:color/transparent"
+            app:itemTextColor="#ffffff"
+            app:itemIconSize="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu="@menu/bottom_navigation_menu" />
