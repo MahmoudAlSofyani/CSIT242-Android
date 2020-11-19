@@ -1,89 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#000000" android:orientation="vertical">
+    android:background="#000000"
+    android:orientation="vertical">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Overview of Shop"
         android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
+        android:text="Overview of Shop"
         android:textAlignment="center"
-        />
-    
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
         app:strokeColor="#A80000"
-        app:strokeWidth="1dp"
-        android:layout_height="wrap_content">
+        app:strokeWidth="1dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="15sp"
-                android:textColor="#ffffff"
                 android:padding="10dp"
-                android:text="Number of Suppliers"/>
+                android:text="Number of Suppliers"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/maindashboardActivity_numSuppliers_TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="20sp"
                 android:padding="10dp"
-                android:textColor="#ffffff"
                 android:text="Loading..."
-                />
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:onClick="goToManageSuppliers"
                 android:layout_marginBottom="20dp"
-                android:textColor="#ffffff"
-                android:text="Manage Suppliers" />
+                android:onClick="goToManageSuppliers"
+                android:text="Manage Suppliers"
+                android:textColor="#ffffff" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
         app:strokeColor="#A80000"
-        app:strokeWidth="1dp"
-        android:layout_height="wrap_content">
+        app:strokeWidth="1dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="15sp"
-                android:textColor="#ffffff"
-                android:padding="10dp"
-                android:text="Unpaid Expenses"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="20sp"
                 android:padding="10dp"
+                android:text="Unpaid Expenses"
+                android:textAlignment="center"
                 android:textColor="#ffffff"
-                android:text="AED 69,420"/>
+                android:textSize="15sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="AED 69,420"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
@@ -91,8 +94,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:textColor="#ffffff"
-                android:text="View Expenses" />
+                android:text="View Expenses"
+                android:textColor="#ffffff" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -107,46 +110,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Record New Sale"
-            android:textColor="#ffffff"
-            />
+            android:textColor="#ffffff" />
+
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Manage Transactions"
-            android:textColor="#ffffff"/>
+            android:textColor="#ffffff" />
+
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Statistics"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        >
-        <LinearLayout
+        android:gravity="bottom"
+        android:layout_height="fill_parent">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:background="#000000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal"
-            >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:src="@drawable/shop_icon"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:src="@drawable/home_icon"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:src="@drawable/graph_icon"/>
-        </LinearLayout>
-    </RelativeLayout>
+            app:menu="@menu/bottom_navigation_menu" />
+    </LinearLayout>
 </LinearLayout>

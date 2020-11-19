@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottomNavigation_menu_transactions"
+        android:enabled="true"
+        android:icon="@drawable/bill"
+        android:title="Transactions"/>
+    <item
+        android:id="@+id/bottomNavigation_menu_statistics"
+        android:enabled="true"
+        android:icon="@drawable/analytics"
+        android:title="Statistics"/>
+    <item
+        android:id="@+id/bottomNavigation_menu_home"
+        android:enabled="true"
+        android:icon="@drawable/bill"
+        android:title="Home"/>
+    <item
+        android:id="@+id/bottomNavigation_menu_expenses"
+        android:enabled="true"
+        android:icon="@drawable/dollar"
+        android:title="Expenses"/>
+    <item
+        android:id="@+id/bottomNavigation_menu_suppliers"
+        android:enabled="true"
+        android:icon="@drawable/shipping"
+        android:title="Suppliers"/>
+</menu>
+
+<!--Home-->
+<!--Suppliers-->
+<!--Expenses-->
+<!--Transactions-->
+<!--Statistics-->
