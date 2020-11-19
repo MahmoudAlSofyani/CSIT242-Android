@@ -6,15 +6,12 @@
     android:background="#000000"
     android:orientation="vertical">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:title="Manager Suppliers"/>
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Suppliers"
         android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:textColor="#ffffff"
         android:textAlignment="center"
