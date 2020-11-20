@@ -34,6 +34,7 @@ public class MainDashboardActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
+        bottomNavigationView.setSelectedItemId(R.id.bottomNavigation_menu_home);
 
         getSupplierCount();
     }
@@ -46,16 +47,14 @@ public class MainDashboardActivity extends AppCompatActivity {
                     System.out.println("Item 1 was clicked");
                     break;
                 }
-                case R.id.bottomNavigation_menu_home: {
-                    System.out.println("Item 2 was clicked");
-                    break;
-                }
                 case R.id.bottomNavigation_menu_statistics: {
                     System.out.println("Item 3 was clicked");
                     break;
                 }
                 case R.id.bottomNavigation_menu_suppliers: {
-                    System.out.println("Item 4 was clicked");
+                    Intent intent = new Intent(MainDashboardActivity.this, ManageSuppliersActivity.class);
+                    intent.putExtra("NUM_SUPPLIERS", numOfSuppliers);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.bottomNavigation_menu_transactions: {

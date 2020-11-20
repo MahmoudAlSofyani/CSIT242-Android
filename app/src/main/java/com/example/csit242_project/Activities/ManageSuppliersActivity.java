@@ -2,6 +2,7 @@ package com.example.csit242_project.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.csit242_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -23,6 +26,7 @@ import Models.SupplierModel;
 public class ManageSuppliersActivity extends AppCompatActivity {
 
     FirebaseFirestore db;
+    BottomNavigationView bottomNavigationView;
     List<DocumentSnapshot> listOfSuppliers;
     int numSuppliers;
     ArrayList<Supplier> supplierArrayList = new ArrayList<>();
@@ -34,7 +38,12 @@ public class ManageSuppliersActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         setContentView(R.layout.managesuppliers_activity);
 
-        getListOfSuppliers();
+        System.out.println("onCreate Called");
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+        bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
+        bottomNavigationView.setSelectedItemId(R.id.bottomNavigation_menu_suppliers);
+
         final Intent intent = getIntent();
         numSuppliers = intent.getIntExtra("NUM_SUPPLIERS", 0);
         supplier_ListView = (ListView) findViewById(R.id.managesuppliersActivity_supplierList_ListView);
@@ -51,6 +60,41 @@ public class ManageSuppliersActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        System.out.println("onStart Called");
+        getListOfSuppliers();
+    }
+
+    BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            Intent intent;
+            switch(item.getItemId()) {
+                case R.id.bottomNavigation_menu_expenses: {
+                    System.out.println("Item 1 was clicked");
+                    break;
+                }
+                case R.id.bottomNavigation_menu_home: {
+                    intent = new Intent(ManageSuppliersActivity.this, MainDashboardActivity.class);
+                    startActivity(intent);
+                    break;
+                }
+                case R.id.bottomNavigation_menu_statistics: {
+                    System.out.println("Item 3 was clicked");
+                    break;
+                }
+                case R.id.bottomNavigation_menu_transactions: {
+                    System.out.println("Item 5 was clicked");
+                    break;
+                }
+            }
+            return true;
+        }
+    };
 
     public void getListOfSuppliers() {
 

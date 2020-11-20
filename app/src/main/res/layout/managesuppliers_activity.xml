@@ -19,9 +19,23 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="600dp"
         android:divider="#A80000"
         android:dividerHeight="1.5dp"
         android:id="@+id/managesuppliersActivity_supplierList_ListView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:layout_height="fill_parent">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:background="@android:color/transparent"
+            app:itemTextColor="#ffffff"
+            app:itemIconSize="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu" />
+    </LinearLayout>
 
 </LinearLayout>
