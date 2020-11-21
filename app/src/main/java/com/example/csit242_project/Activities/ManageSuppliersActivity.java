@@ -1,5 +1,6 @@
 package com.example.csit242_project.Activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -31,6 +32,7 @@ public class ManageSuppliersActivity extends AppCompatActivity {
     int numSuppliers;
     ArrayList<Supplier> supplierArrayList = new ArrayList<>();
     ListView supplier_ListView;
+    Context context = ManageSuppliersActivity.this;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -72,23 +74,25 @@ public class ManageSuppliersActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-            Intent intent;
             switch(item.getItemId()) {
                 case R.id.bottomNavigation_menu_expenses: {
-                    System.out.println("Item 1 was clicked");
+                    Intent intent = new Intent(context, ExpensesActivity.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.bottomNavigation_menu_home: {
-                    intent = new Intent(ManageSuppliersActivity.this, MainDashboardActivity.class);
+                    Intent intent = new Intent(context, MainDashboardActivity.class);
                     startActivity(intent);
                     break;
                 }
                 case R.id.bottomNavigation_menu_statistics: {
-                    System.out.println("Item 3 was clicked");
+                    Intent intent = new Intent(context, StatisticsActivity.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.bottomNavigation_menu_transactions: {
-                    System.out.println("Item 5 was clicked");
+                    Intent intent = new Intent(context, ManageTransactions.class);
+                    startActivity(intent);
                     break;
                 }
             }

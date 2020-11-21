@@ -13,6 +13,9 @@
         <activity android:name=".Activities.MainDashboardActivity"/>
         <activity android:name=".Activities.ManageSuppliersActivity"/>
         <activity android:name=".Activities.SupplierInformationActivity"/>
+        <activity android:name=".Activities.ManageTransactions" />
+        <activity android:name=".Activities.StatisticsActivity"/>
+        <activity android:name=".Activities.ExpensesActivity"/>
         <activity android:name=".Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
