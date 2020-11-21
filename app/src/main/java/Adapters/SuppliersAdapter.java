@@ -48,6 +48,7 @@ public class SuppliersAdapter extends ArrayAdapter<Supplier> {
         ImageDownloaderTask task = new ImageDownloaderTask();
         AsyncTask<String, Void, Bitmap> bitmap =  task.execute(currentSupplier.getSupplierLogoURL());
         try {
+            System.out.println(currentSupplier.getSupplierLogoURL());
             supplierLogo.setImageBitmap(bitmap.get());
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();

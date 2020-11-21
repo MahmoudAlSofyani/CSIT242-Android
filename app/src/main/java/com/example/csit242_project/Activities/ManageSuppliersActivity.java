@@ -111,8 +111,10 @@ public class ManageSuppliersActivity extends AppCompatActivity {
 
     public void populateListOfSuppliers(List<DocumentSnapshot> list) {
         SuppliersAdapter suppliersAdapter;
+        String supplierLogoUrl = "";
         for(int i = 0; i < numSuppliers; i++) {
-            supplierArrayList.add(new Supplier(list.get(i).get("supplierName").toString(), list.get(i).get("supplierCategory").toString(), list.get(i).get("supplierLogoURL").toString(), (List<SupplierModel>) list.get(i).get("supplierModels")));
+            supplierLogoUrl = "https://logo.clearbit.com/" + list.get(i).get("supplierName").toString().toLowerCase() + ".com";
+            supplierArrayList.add(new Supplier(list.get(i).get("supplierName").toString(), list.get(i).get("supplierCategory").toString(), supplierLogoUrl, (List<SupplierModel>) list.get(i).get("supplierModels")));
         }
         suppliersAdapter = new SuppliersAdapter(this, supplierArrayList);
         supplier_ListView.setAdapter(suppliersAdapter);
