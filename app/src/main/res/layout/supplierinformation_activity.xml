@@ -24,5 +24,15 @@
     <ListView
         android:id="@+id/supplierInformationActivity_supplierModels_ListView"
         android:layout_width="match_parent"
-        android:layout_height="500dp"/>
+        android:layout_height="400dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:onClick="removeSupplier"
+        android:layout_height="wrap_content"
+        android:text="Remove Supplier"/>
+
 </LinearLayout>

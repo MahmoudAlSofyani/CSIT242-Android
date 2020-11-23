@@ -123,4 +123,14 @@ public class ManageSuppliersActivity extends AppCompatActivity {
         suppliersAdapter = new SuppliersAdapter(this, supplierArrayList);
         supplier_ListView.setAdapter(suppliersAdapter);
     }
+
+    public void goToAddNewSupplier(View view) {
+        Intent intent = new Intent(this, AddNewSupplier.class);
+        startActivity(intent);
+
+    }
+
+    public void goToRemoveSupplier(View view) {
+
+    }
 }
