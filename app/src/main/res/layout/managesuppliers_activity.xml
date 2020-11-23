@@ -36,12 +36,6 @@
             android:textColor="#ffffff"
             android:onClick="goToAddNewSupplier"
             android:text="Add New Supplier"/>
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:textColor="#ffffff"
-            android:onClick="goToRemoveSupplier"
-            android:layout_height="wrap_content"
-            android:text="Remove Supplier"/>
     </LinearLayout>
 
     <LinearLayout

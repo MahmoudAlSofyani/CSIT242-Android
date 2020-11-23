@@ -7,20 +7,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.csit242_project.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.firestore.FirebaseFirestore;
-
 import java.util.HashMap;
 import java.util.Map;
-
-import Models.Supplier;
-
 public class AddNewSupplier extends AppCompatActivity {
 
     TextInputEditText supplierName_textView;
@@ -28,7 +22,6 @@ public class AddNewSupplier extends AppCompatActivity {
     ArrayAdapter<String> spinnerAdapter;
     String category = "";
     FirebaseFirestore db;
-
     String[] supplierCategories = {"Computers", "Home Entertainment", "Mobile Phones", "Computer Accessories"};
 
     @Override
@@ -49,29 +42,21 @@ public class AddNewSupplier extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 category = supplierCategories[position];
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         };
-
-
         supplierCategory_spinner.setOnItemSelectedListener(listener);
     }
-
 
     public void addNewSupplier(View view) {
         String name = supplierName_textView.getText().toString();
         String supplierLogoUrl = "";
         Map<String, Object> supplier = new HashMap<>();
-
         supplierLogoUrl = "https://logo.clearbit.com/" + name.toLowerCase() + ".com";
-
         supplier.put("supplierName", name);
         supplier.put("supplierCategory", category);
         supplier.put("supplierLogoUrl", supplierLogoUrl);
-
         db.collection("suppliers").document(name).set(supplier).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
