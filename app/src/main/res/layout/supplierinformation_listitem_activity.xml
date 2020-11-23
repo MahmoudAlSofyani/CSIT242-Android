@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical" android:padding="5dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/supplierInformationActivity_listItem_model_TextView"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#A80000"
+        android:padding="5dp"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:textColor="#ffffff"
+        android:text="Available Colors:"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/supplierInformationActivity_listItem_colors_TextView"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:textColor="#ffffff"
+        android:text="Available Capacities:"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/supplierInformationActivity_listItem_capacity_TextView"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

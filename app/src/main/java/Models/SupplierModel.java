@@ -1,10 +1,16 @@
 package Models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SupplierModel {
+public class SupplierModel implements Serializable {
 
     private String modelName;
     private List<String> modelColors = null;
@@ -43,4 +49,6 @@ public class SupplierModel {
     public void setModelCapacities(List<String> modelCapacities) {
         this.modelCapacities = modelCapacities;
     }
+
+
 }
