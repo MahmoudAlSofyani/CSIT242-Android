@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".Activities.newSale">
 
     <com.google.android.material.textview.MaterialTextView
@@ -54,20 +55,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/shop_icon"/>
+                android:src="@drawable/shipping"
+                />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/home_icon"/>
+                android:src="@drawable/home"/>
+                />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/graph_icon"/>
+                android:src="@drawable/analytics"
+                />
         </LinearLayout>
     </RelativeLayout>
-
-
-
 </RelativeLayout>

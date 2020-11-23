@@ -16,8 +16,8 @@
         <activity android:name=".Activities.ManageTransactions" />
         <activity android:name=".Activities.StatisticsActivity"/>
         <activity android:name=".Activities.ExpensesActivity"/>
+        <activity android:name=".Activities.newSale"/>
         <activity android:name=".Activities.LoginActivity">
-        <activity android:name=".Activities.newSale"></activity> 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
