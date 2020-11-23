@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Activities.newSale">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:text="@string/sales"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="gravity"/>
+
+    <View
+        android:id="@+id/lineBreak"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="62dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="61dp">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/shipping"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/home"/>
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/analytics"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

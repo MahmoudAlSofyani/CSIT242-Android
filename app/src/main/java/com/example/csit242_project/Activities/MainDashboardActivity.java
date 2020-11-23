@@ -92,4 +92,9 @@ public class MainDashboardActivity extends AppCompatActivity {
         intent.putExtra("NUM_SUPPLIERS", numOfSuppliers);
         startActivity(intent);
     }
+
+    public void goToRecordNewSale(View view) {
+        Intent intent = new Intent(this, newSale.class);
+        startActivity(intent);
+    }
 }
