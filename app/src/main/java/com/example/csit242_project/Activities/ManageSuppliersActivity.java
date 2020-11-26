@@ -102,15 +102,17 @@ public class ManageSuppliersActivity extends AppCompatActivity {
 
     public void getListOfSuppliers() {
 
-        db.collection("suppliers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if(task.isSuccessful()){
-                    listOfSuppliers = task.getResult().getDocuments();
-                    populateListOfSuppliers(listOfSuppliers);
+        if(listOfSuppliers == null) {
+            db.collection("suppliers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if(task.isSuccessful()){
+                        listOfSuppliers = task.getResult().getDocuments();
+                        populateListOfSuppliers(listOfSuppliers);
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     public void populateListOfSuppliers(List<DocumentSnapshot> list) {
