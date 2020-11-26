@@ -97,6 +97,7 @@ obj/
 .idea/jarRepositories.xml
 .idea/navEditor.xml
 .idea/*
+.idea/codeStyles/Project.xml
 
 # OS-specific files
 .DS_Store
