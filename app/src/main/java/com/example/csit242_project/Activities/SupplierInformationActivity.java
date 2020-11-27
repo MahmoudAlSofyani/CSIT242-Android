@@ -66,6 +66,10 @@ public class SupplierInformationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
 
+    public void goToPurchaseFromSupplier(View view) {
+        Intent intent = new Intent(this, PurchaseFromSupplier.class);
+        startActivity(intent);
     }
 }
