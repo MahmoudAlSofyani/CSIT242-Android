@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Expenses"
+        android:text="@string/expensesTitle"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="20sp" />
@@ -35,9 +35,9 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:padding="10dp"
-                    android:text="Select month"
+                    android:text="@string/selectMonth"
                     android:textAlignment="textStart"
                     android:textColor="#ffffff"
                     android:textSize="15sp" />
@@ -46,7 +46,7 @@
                     android:id="@+id/spinner"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="20dp" />
+                    android:layout_marginEnd="20dp" />
             </LinearLayout>
 
             <com.google.android.material.card.MaterialCardView
@@ -65,7 +65,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
-                        android:text="Handling Costs"
+                        android:text="@string/handlingCosts"
                         android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textSize="15sp" />
@@ -76,7 +76,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
-                        android:text="Transport"
+                        android:text="@string/transport"
                         android:textColor="#ffffff" />
 
                     <com.google.android.material.button.MaterialButton
@@ -85,7 +85,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
-                        android:text="Storage"
+                        android:text="@string/storage"
                         android:textColor="#ffffff" />
 
                 </LinearLayout>
@@ -107,7 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
-                        android:text="Bills"
+                        android:text="@string/bills"
                         android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textSize="15sp" />
@@ -118,7 +118,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
-                        android:text="Electricity"
+                        android:text="@string/electricity"
                         android:textColor="#ffffff" />
 
                     <com.google.android.material.button.MaterialButton
@@ -127,7 +127,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
-                        android:text="Water"
+                        android:text="@string/water"
                         android:textColor="#ffffff" />
 
                     <com.google.android.material.button.MaterialButton
@@ -136,7 +136,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
-                        android:text="Internet"
+                        android:text="@string/internet"
                         android:textColor="#ffffff" />
 
                 </LinearLayout>
@@ -161,17 +161,17 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
-                        android:text="Paid amount for the month"
+                        android:text="@string/paidAmountForTheMonth"
                         android:textColor="#ffffff" />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:text="Unpaid amount for the month"
-                        android:textColor="#ffffff" />
+                    <!--                    <com.google.android.material.button.MaterialButton-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginLeft="20dp"-->
+                    <!--                        android:layout_marginRight="20dp"-->
+                    <!--                        android:layout_marginBottom="20dp"-->
+                    <!--                        android:text="Unpaid amount for the month"-->
+                    <!--                        android:textColor="#ffffff" />-->
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

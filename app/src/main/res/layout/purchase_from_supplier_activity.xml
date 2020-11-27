@@ -10,14 +10,14 @@
         android:id="@+id/purchase_from_supplier_supplierName_TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Supplier Name"
+        android:text="@string/supplierName"
         android:textAlignment="center"
         android:textSize="25sp" />
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Purchase from Supplier"
+        android:text="@string/purchaseFromSupplier"
         android:textSize="20sp" />
 
     <ListView
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Total Qty:"
+            android:text="@string/totalQty"
             android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -46,16 +46,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="placeholder"
-            android:textSize="20dp" />
+            android:text="@string/placeholder"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Price Breakdown"
+        android:text="@string/priceBreakdown"
         android:textAlignment="center"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,15 +68,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Subtotal:"
-            android:textSize="20dp" />
+            android:text="@string/subtotal"
+            android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/purchase_from_supplier_subtotal_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -91,15 +91,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="VAT @ 5%:"
-            android:textSize="20dp" />
+            android:text="@string/vat"
+            android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/purchase_from_supplier_VAT_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -113,20 +113,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="25dp"
-            android:text="Total due:" />
+            android:textSize="25sp"
+            android:text="@string/totalDue" />
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/purchase_from_supplier_total_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="25dp"/>
+            android:textSize="25sp"/>
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit Transaction"
+        android:text="@string/submitTransaction"
         android:onClick="submitTransaction"
         android:textColor="#ffffff"
         android:layout_marginLeft="20dp"
