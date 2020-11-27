@@ -35,8 +35,7 @@ public class SupplierInformationActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         supplier = (Supplier) getIntent().getExtras().getSerializable("Supplier");
-        System.out.println(supplier.getSupplierModels());
-        
+
 
         if(supplier != null) {
             supplierName_TextView.setText(supplier.getSupplierName());
@@ -70,6 +69,9 @@ public class SupplierInformationActivity extends AppCompatActivity {
 
     public void goToPurchaseFromSupplier(View view) {
         Intent intent = new Intent(this, PurchaseFromSupplier.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Supplier", supplier);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }

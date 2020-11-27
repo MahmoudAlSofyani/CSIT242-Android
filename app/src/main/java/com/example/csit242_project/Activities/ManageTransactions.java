@@ -36,8 +36,6 @@ public class ManageTransactions extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         bottomNavigationView.setSelectedItemId(R.id.bottomNavigation_menu_transactions);
-
-        getSupplierCount();
     }
 
     BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -69,18 +67,4 @@ public class ManageTransactions extends AppCompatActivity {
             return true;
         }
     };
-
-    public void getSupplierCount() {
-
-        db.collection("suppliers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if(task.isSuccessful()) {
-                    numOfSuppliers = task.getResult().size();
-                } else {
-                    System.out.println("Error");
-                }
-            }
-        });
-    }
 }
