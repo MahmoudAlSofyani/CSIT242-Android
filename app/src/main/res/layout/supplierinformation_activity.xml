@@ -34,5 +34,13 @@
         android:onClick="removeSupplier"
         android:layout_height="wrap_content"
         android:text="Remove Supplier"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Purchase from this Supplier"
+        android:onClick="goToPurchaseFromSupplier"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"/>
 
 </LinearLayout>
