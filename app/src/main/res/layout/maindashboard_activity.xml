@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Overview of Shop"
+        android:text="@string/overviewOfShop"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="20sp" />
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Number of Suppliers"
+                android:text="@string/numberOfSuppliers"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="15sp" />
@@ -42,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Loading..."
+                android:text="@string/loading"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />
@@ -54,7 +54,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:onClick="goToManageSuppliers"
-                android:text="Manage Suppliers"
+                android:text="@string/manageSuppliers"
                 android:textColor="#ffffff" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Unpaid Expenses"
+                android:text="@string/unpaidExpenses"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="15sp" />
@@ -85,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="AED 69,420"
+                android:text="@string/expensesAmount"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />
@@ -96,7 +96,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="View Expenses"
+                android:text="@string/viewExpenses"
                 android:textColor="#ffffff" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -112,19 +112,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="goToRecordNewSale"
-            android:text="Record New Sale"
+            android:text="@string/recordNewSale"
             android:textColor="#ffffff" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Manage Transactions"
+            android:text="@string/manageTransactions"
             android:textColor="#ffffff" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Statistics"
+            android:text="@string/viewStatistics"
             android:textColor="#FFFFFF" />
     </LinearLayout>
 

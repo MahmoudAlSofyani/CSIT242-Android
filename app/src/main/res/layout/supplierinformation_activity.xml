@@ -33,11 +33,11 @@
         android:layout_marginRight="25dp"
         android:onClick="removeSupplier"
         android:layout_height="wrap_content"
-        android:text="Remove Supplier"/>
+        android:text="@string/removeSupplier"/>
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Purchase from this Supplier"
+        android:text="@string/purchaseFromThisSupplier"
         android:onClick="goToPurchaseFromSupplier"
         android:textColor="#ffffff"
         android:layout_marginLeft="25dp"
