@@ -14,8 +14,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.List;
+
+import Models.Transaction;
 
 public class ManageTransactions extends AppCompatActivity {
 
@@ -23,6 +29,8 @@ public class ManageTransactions extends AppCompatActivity {
     FirebaseFirestore db;
     int numOfSuppliers;
     Context context = ManageTransactions.this;
+    List<DocumentSnapshot> transactionItem;
+
 
 
     @Override
@@ -36,6 +44,8 @@ public class ManageTransactions extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         bottomNavigationView.setSelectedItemId(R.id.bottomNavigation_menu_transactions);
+
+        getTransactions();
     }
 
     BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -67,4 +77,34 @@ public class ManageTransactions extends AppCompatActivity {
             return true;
         }
     };
+
+    public void getTransactions() {
+
+        db.collection("transactions").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()) {
+                    for (QueryDocumentSnapshot documentSnapshot : task.getResult()) {
+
+                       Transaction transaction = documentSnapshot.toObject(Transaction.class);
+                       displayStuff(transaction);
+
+                    }
+                } else {
+                    System.out.println("There was an error");
+                }
+            }
+        });
+    }
+
+    public void displayStuff(Transaction transaction) {
+        System.out.println(transaction);
+
+        System.out.println(transaction.getSupplierName());
+        System.out.println(transaction.getTimestamp());
+        System.out.println(transaction.getTotalDue());
+        for(int i = 0; i < transaction.getItems().size(); i++) {
+            System.out.println(transaction.getItems().get("Pixel 5"));
+        }
+    }
 }
