@@ -19,7 +19,7 @@
         android:layout_columnWeight="1"
         android:layout_marginStart="10dp"
         android:textSize="30sp"
-        android:textColor="@android:color/white"
+        android:textColor="@color/mainTextColor"
         android:id="@+id/itemNameTV"
         android:layout_row="0"
         android:layout_column="1"/>
@@ -29,7 +29,7 @@
         android:layout_columnWeight="1"
         android:layout_marginStart="10dp"
         android:textSize="20sp"
-        android:textColor="@android:color/white"
+        android:textColor="@color/mainTextColor"
         android:id="@+id/itemNameTV2"
         android:layout_row="1"
         android:layout_column="1"/>

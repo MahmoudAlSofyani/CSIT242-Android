@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
@@ -11,20 +12,21 @@
         android:layout_marginTop="20dp"
         android:text="@string/statistics"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:textSize="20sp" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        app:strokeColor="#A80000"
+        app:strokeColor="@color/divider"
         app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/lightBackground">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -32,7 +34,7 @@
                 android:padding="10dp"
                 android:text="@string/totalStatistics"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="@color/mainTextColor"
                 android:textSize="15sp" />
 
             <com.google.android.material.button.MaterialButton
@@ -42,7 +44,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/productsSold"
-                android:textColor="#ffffff" />
+                android:textColor="@color/mainTextColor" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
@@ -51,7 +53,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/profitRevenue"
-                android:textColor="#ffffff" />
+                android:textColor="@color/mainTextColor" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
@@ -59,9 +61,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/amountOfSales"
-                android:textColor="#ffffff" />
-
+                android:text="Amount of Sales"
+                android:textColor="@color/mainTextColor" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -69,13 +70,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        app:strokeColor="#A80000"
+        app:strokeColor="@color/divider"
         app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/lightBackground">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -83,7 +85,7 @@
                 android:padding="10dp"
                 android:text="@string/lastMonthStatistics"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="@color/mainTextColor"
                 android:textSize="15sp" />
 
             <com.google.android.material.button.MaterialButton
@@ -92,8 +94,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/productsSold"
-                android:textColor="#ffffff" />
+                android:text="Products Sold"
+                android:textColor="@color/mainTextColor" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
@@ -101,8 +103,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/profitRevenue"
-                android:textColor="#ffffff" />
+                android:text="Profit and Revenue"
+                android:textColor="@color/mainTextColor" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
@@ -110,8 +112,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/amountOfSales"
-                android:textColor="#ffffff" />
+                android:text="Amount of Sales"
+                android:textColor="@color/mainTextColor" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

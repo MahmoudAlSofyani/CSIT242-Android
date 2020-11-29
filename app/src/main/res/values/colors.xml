@@ -2,5 +2,7 @@
 <resources>
     <color name="colorPrimary">#A80000</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#A80000</color>
+    <color name="mainTextColor">#FFFFFF</color>
+    <color name="divider">#A80000</color>
+    <color name="lightBackground">#171D23</color>
 </resources>

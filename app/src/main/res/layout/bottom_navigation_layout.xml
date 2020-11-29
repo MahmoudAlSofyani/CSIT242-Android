@@ -8,9 +8,9 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
-            app:itemIconTint="#A80000"
+            app:itemIconTint="@color/divider"
             app:itemBackground="@color/colorPrimaryDark"
-            app:itemTextColor="#ffffff"
+            android:textColor="@color/mainTextColor"
             app:itemIconSize="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

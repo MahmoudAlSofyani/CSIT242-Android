@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#000000"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     tools:context=".Activities.LoginActivity">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:textSize="25sp"
         android:text="@string/csit242Project"
         android:textAlignment="center" />
@@ -28,7 +28,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginActivity_email_EditText"
             android:layout_width="match_parent"
-            android:background="#000000"
+            android:background="@color/colorPrimaryDark"
             android:textSize="20sp"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -44,7 +44,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginActivity_password_EditText"
             android:layout_width="match_parent"
-            android:background="#000000"
+            android:background="@color/colorPrimaryDark"
             android:textSize="20sp"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -57,7 +57,7 @@
         android:layout_marginTop="20dp"
         android:onClick="loginInAsExistingUser"
         android:text="@string/login"
-        android:textColor="#ffffff" />
+        android:textColor="@color/mainTextColor" />
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
@@ -67,7 +67,7 @@
         android:layout_marginTop="10dp"
         android:onClick="goToSignUpActivity"
         android:text="@string/signup"
-        android:textColor="#ffffff" />
+        android:textColor="@color/mainTextColor" />
 
 
 </LinearLayout>
