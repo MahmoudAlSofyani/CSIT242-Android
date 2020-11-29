@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
@@ -12,7 +13,7 @@
         android:layout_marginTop="20dp"
         android:text="@string/expensesTitle"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:textSize="20sp" />
 
 
@@ -39,7 +40,7 @@
                     android:padding="10dp"
                     android:text="@string/selectMonth"
                     android:textAlignment="textStart"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/mainTextColor"
                     android:textSize="15sp" />
 
                 <Spinner
@@ -53,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                app:strokeColor="#A80000"
+                app:strokeColor="@color/divider"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
@@ -67,7 +68,7 @@
                         android:padding="10dp"
                         android:text="@string/handlingCosts"
                         android:textAlignment="center"
-                        android:textColor="#ffffff"
+                        android:textColor="@color/mainTextColor"
                         android:textSize="15sp" />
 
                     <com.google.android.material.button.MaterialButton
@@ -77,7 +78,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
                         android:text="@string/transport"
-                        android:textColor="#ffffff" />
+                        android:textColor="@color/mainTextColor" />
 
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="match_parent"
@@ -86,7 +87,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
                         android:text="@string/storage"
-                        android:textColor="#ffffff" />
+                        android:textColor="@color/mainTextColor" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -95,7 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                app:strokeColor="#A80000"
+                app:strokeColor="@color/divider"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
@@ -109,7 +110,7 @@
                         android:padding="10dp"
                         android:text="@string/bills"
                         android:textAlignment="center"
-                        android:textColor="#ffffff"
+                        android:textColor="@color/mainTextColor"
                         android:textSize="15sp" />
 
                     <com.google.android.material.button.MaterialButton
@@ -119,7 +120,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
                         android:text="@string/electricity"
-                        android:textColor="#ffffff" />
+                        android:textColor="@color/mainTextColor" />
 
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="match_parent"
@@ -128,7 +129,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
                         android:text="@string/water"
-                        android:textColor="#ffffff" />
+                        android:textColor="@color/mainTextColor" />
 
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="match_parent"
@@ -137,7 +138,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
                         android:text="@string/internet"
-                        android:textColor="#ffffff" />
+                        android:textColor="@color/mainTextColor" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -146,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                app:strokeColor="#A80000"
+                app:strokeColor="@color/divider"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
@@ -162,7 +163,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
                         android:text="@string/paidAmountForTheMonth"
-                        android:textColor="#ffffff" />
+                        android:textColor="@color/mainTextColor" />
 
                     <!--                    <com.google.android.material.button.MaterialButton-->
                     <!--                        android:layout_width="match_parent"-->

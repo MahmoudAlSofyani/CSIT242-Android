@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#000000"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:textSize="20sp"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:textAlignment="center"
         />
 
@@ -28,7 +28,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:onClick="removeSupplier"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:text="@string/purchaseFromThisSupplier"
         android:onClick="goToPurchaseFromSupplier"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"/>
 

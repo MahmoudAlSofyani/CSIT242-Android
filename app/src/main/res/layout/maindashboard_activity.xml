@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical">
 
     <com.google.android.material.textview.MaterialTextView
@@ -12,20 +12,20 @@
         android:layout_marginTop="20dp"
         android:text="@string/overviewOfShop"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:textSize="20sp" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        app:strokeColor="#A80000"
+        app:strokeColor="@color/divider"
         app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#171d23"
+            android:background="@color/lightBackground"
             android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
@@ -34,7 +34,7 @@
                 android:padding="10dp"
                 android:text="@string/numberOfSuppliers"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="@color/mainTextColor"
                 android:textSize="15sp" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -44,7 +44,7 @@
                 android:padding="10dp"
                 android:text="@string/loading"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="@color/mainTextColor"
                 android:textSize="20sp" />
 
             <com.google.android.material.button.MaterialButton
@@ -55,7 +55,7 @@
                 android:layout_marginBottom="20dp"
                 android:onClick="goToManageSuppliers"
                 android:text="@string/manageSuppliers"
-                android:textColor="#ffffff" />
+                android:textColor="@color/mainTextColor" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -63,13 +63,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        app:strokeColor="#A80000"
+        app:strokeColor="@color/divider"
         app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#171d23"
+            android:background="@color/lightBackground"
             android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
@@ -78,7 +78,7 @@
                 android:padding="10dp"
                 android:text="@string/unpaidExpenses"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="@color/mainTextColor"
                 android:textSize="15sp" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -87,7 +87,7 @@
                 android:padding="10dp"
                 android:text="@string/expensesAmount"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="@color/mainTextColor"
                 android:textSize="20sp" />
 
             <com.google.android.material.button.MaterialButton
@@ -97,7 +97,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/viewExpenses"
-                android:textColor="#ffffff" />
+                android:textColor="@color/mainTextColor" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -113,19 +113,19 @@
             android:layout_height="wrap_content"
             android:onClick="goToRecordNewSale"
             android:text="@string/recordNewSale"
-            android:textColor="#ffffff" />
+            android:textColor="@color/mainTextColor" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/manageTransactions"
-            android:textColor="#ffffff" />
+            android:textColor="@color/mainTextColor" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/viewStatistics"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/mainTextColor" />
     </LinearLayout>
 
     <include layout="@layout/bottom_navigation_layout" />
