@@ -107,4 +107,6 @@ public class ManageTransactions extends AppCompatActivity {
             System.out.println(transaction.getItems().get("Pixel 5"));
         }
     }
+
+    // TODO: Make custom list adapter to show transactions
 }
