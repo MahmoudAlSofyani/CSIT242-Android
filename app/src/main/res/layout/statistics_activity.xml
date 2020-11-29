@@ -63,7 +63,6 @@
                 android:layout_marginBottom="20dp"
                 android:text="Amount of Sales"
                 android:textColor="@color/mainTextColor" />
-
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -84,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Last Month's Statistics"
+                android:text="@string/lastMonthStatistics"
                 android:textAlignment="center"
                 android:textColor="@color/mainTextColor"
                 android:textSize="15sp" />
