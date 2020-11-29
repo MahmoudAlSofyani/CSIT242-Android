@@ -20,6 +20,7 @@ import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.lang.reflect.Array;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -31,10 +32,6 @@ import java.util.Map;
 import Adapters.SupplierModelAdapter;
 import Models.Supplier;
 import Models.SupplierModel;
-import Models.SupplierTransaction;
-
-import static java.lang.Double.parseDouble;
-import static java.lang.Integer.parseInt;
 
 public class PurchaseFromSupplier extends AppCompatActivity {
 
@@ -179,98 +176,81 @@ public class PurchaseFromSupplier extends AppCompatActivity {
         String supplierName = supplierName_TextView.getText().toString();
         Double totalDue = Double.parseDouble(total_TextView.getText().toString());
 
-        int iphone12mini_Count = 0;
-        int iphone12_Count = 0;
-        int iphone12pro_Count = 0;
-        int iphone12promax_Count = 0;
-        int pixel5_Count = 0;
-        int pixel4a_Count = 0;
-        int pixel4a5g_Count = 0;
-        int galaxys205g_Count = 0;
-        int galaxys20plus5g_Count = 0;
-        int galaxys20ultra5g_Count = 0;
-        int galaxynote205g_Count = 0;
+        String[] appleModels = {"iPhone 12 Mini", "iPhone 12", "iPhone 12 Pro", "iPhone 12 Pro Max"};
+        String[] samsungModels = {"Galaxy S20 5G", "Galaxy S20+ 5G", "Galaxy S20 Ultra 5G", "Galaxy Note 20 5G"};
+        String[] googleModels = {"Pixel 5", "Pixel 4a", "Pixel 4a 5G"};
+
+        Map<String, Object> transaction = new HashMap<>();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+
+        HashMap<String, Integer> appleModelTransaction = new HashMap<>();
+        appleModelTransaction.put("iPhone 12 Mini", 0);
+        appleModelTransaction.put("iPhone 12", 0);
+        appleModelTransaction.put("iPhone 12 Pro", 0);
+        appleModelTransaction.put("iPhone 12 Pro Max", 0);
+
+        HashMap<String, Integer> samsungModelTransaction = new HashMap<>();
+        samsungModelTransaction.put("Galaxy S20 5G", 0);
+        samsungModelTransaction.put("Galaxy S20+ 5G", 0);
+        samsungModelTransaction.put("Galaxy S20 Ultra 5G", 0);
+        samsungModelTransaction.put("Galaxy Note 20 5G", 0);
+
+        HashMap<String, Integer> googleModelTransaction = new HashMap<>();
+        googleModelTransaction.put("Pixel 5", 0);
+        googleModelTransaction.put("Pixel 4a", 0);
+        googleModelTransaction.put("Pixel 4a 5G", 0);
+
+        System.out.println("Model count: " + modelCount.size() + " " + modelCount.get(0));
 
         for(int i = 0; i < modelCount.size(); i++) {
 
-            switch(modelCount.get(i)) {
-                case"iPhone 12 Mini": {
-                    iphone12mini_Count++;
+            switch(supplierName) {
+                case "Apple": {
+
+                    for(int j = 0; j < appleModels.length; j++) {
+                        if(modelCount.get(i).equals(appleModels[j])) {
+                            appleModelTransaction.put(appleModels[j], appleModelTransaction.get(appleModels[j]) + 1);
+                        }
+                    }
                     break;
                 }
-                case "iPhone 12": {
-                    iphone12_Count++;
+                case "Google": {
+                    for(int j = 0; j < googleModels.length; j++) {
+                        if(modelCount.get(i).equals(googleModels[j])) {
+                            googleModelTransaction.put(googleModels[j], googleModelTransaction.get(googleModels[j]) + 1);
+                        }
+                    }
                     break;
                 }
-                case "iPhone 12 Pro": {
-                    iphone12pro_Count++;
-                    break;
-                }
-                case "iPhone 12 Pro Max": {
-                    iphone12promax_Count++;
-                    break;
-                }
-                case "Pixel 5": {
-                    break;
-                }
-                case "Pixel 4a": {
-                    pixel4a_Count++;
-                    break;
-                }
-                case "Pixel 4a 5G" : {
-                    pixel4a5g_Count++;
-                    break;
-                }
-                case "Galaxy S20 5G" : {
-                    galaxys205g_Count++;
-                    break;
-                }
-                case "Galaxy S20+ 5G": {
-                    galaxys20plus5g_Count++;
-                    break;
-                }
-                case "Galaxy S20 Ultra 5G": {
-                    galaxys20ultra5g_Count++;
-                    break;
-                }
-                case "Galaxy Note 20 5G": {
-                    galaxynote205g_Count++;
+                case "Samsung": {
+                    for(int j = 0; j < samsungModels.length; j++) {
+                        if(modelCount.get(i).equals(samsungModels[j])) {
+                            samsungModelTransaction.put(samsungModels[j], samsungModelTransaction.get(samsungModels[j]) + 1);
+                        }
+                    }
                     break;
                 }
             }
         }
-
-        SupplierTransaction newTransaction;
-        Map<String, Object> transaction = new HashMap<>();
 
         switch (supplierName) {
             case "Apple": {
-                transaction.put("iPhone 12 Mini", iphone12mini_Count);
-                transaction.put("iPhone 12", iphone12_Count);
-                transaction.put("iPhone 12 Pro", iphone12pro_Count);
-                transaction.put("iPhone 12 Pro Max", iphone12promax_Count);
+                transaction.put("items", appleModelTransaction);
                 break;
             }
             case "Google": {
-                transaction.put("Pixel 5", pixel5_Count);
-                transaction.put("Pixel 4a", pixel4a_Count);
-                transaction.put("Pixel 4a 5G", pixel4a5g_Count);
+                transaction.put("items", googleModelTransaction);
                 break;
             }
             case "Samsung": {
-                transaction.put("Galaxy S20 5G", galaxys205g_Count);
-                transaction.put("Galaxy S20+ 5G", galaxys20plus5g_Count);
-                transaction.put("Galaxy S20 Ultra 5G", galaxys20ultra5g_Count);
-                transaction.put("Galaxy Note 20 5G", galaxynote205g_Count);
+                transaction.put("items", samsungModelTransaction);
                 break;
             }
         }
-
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-        transaction.put("supplierName", supplierName);
-        transaction.put("totalDue", totalDue);
         transaction.put("timestamp", dateTimeFormatter.format(now));
+        transaction.put("supplierName", supplierName);
+        transaction.put("totalDue", String.valueOf(totalDue));
 
         db.collection("transactions").add(transaction).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
