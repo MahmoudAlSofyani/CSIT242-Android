@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:orientation="vertical" android:background="#000000">
+    android:layout_height="match_parent" android:orientation="vertical" android:background="@color/colorPrimaryDark">
 
 
     <com.google.android.material.textview.MaterialTextView
@@ -11,7 +11,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:textAlignment="center"
         />
 
@@ -19,7 +19,7 @@
         android:id="@+id/addSupplierActivity_supplierName_EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="#A80000"
+        android:textColorHint="@color/divider"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:hint="@string/supplierName"
@@ -41,6 +41,6 @@
         android:layout_marginRight="25dp"
         android:onClick="addNewSupplier"
         android:layout_marginLeft="25dp"
-        android:textColor="#ffffff"/>
+        android:textColor="@color/mainTextColor"/>
 
 </LinearLayout>

@@ -10,7 +10,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:textSize="25sp"
         android:text="@string/sales"
         android:layout_marginTop="25dp"

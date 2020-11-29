@@ -128,7 +128,7 @@
         android:layout_height="wrap_content"
         android:text="@string/submitTransaction"
         android:onClick="submitTransaction"
-        android:textColor="#ffffff"
+        android:textColor="@color/mainTextColor"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
 
