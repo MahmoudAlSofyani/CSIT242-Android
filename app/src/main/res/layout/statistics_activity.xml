@@ -59,7 +59,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Amount of Sales"
+                android:text="@string/amountOfSales"
                 android:textColor="#ffffff" />
 
         </LinearLayout>
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Last Month's Statistics"
+                android:text="@string/lastMonthStatistics"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="15sp" />
@@ -92,7 +92,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Products Sold"
+                android:text="@string/productsSold"
                 android:textColor="#ffffff" />
 
             <com.google.android.material.button.MaterialButton
@@ -101,7 +101,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Profit and Revenue"
+                android:text="@string/profitRevenue"
                 android:textColor="#ffffff" />
 
             <com.google.android.material.button.MaterialButton
@@ -110,7 +110,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Amount of Sales"
+                android:text="@string/amountOfSales"
                 android:textColor="#ffffff" />
 
         </LinearLayout>
