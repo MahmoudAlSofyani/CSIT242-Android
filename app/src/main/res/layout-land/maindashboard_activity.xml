@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/overviewOfShop"
+        android:textAlignment="center"
+        android:textColor="@color/mainTextColor"
+        android:textSize="20sp" />
+
+    <ScrollView
+        style="@android:style/Widget.Material.ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="303dp"
+        android:scrollbarStyle="insideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:strokeColor="@color/divider"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBackground"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/numberOfSuppliers"
+                        android:textAlignment="center"
+                        android:textColor="@color/mainTextColor"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/maindashboardActivity_numSuppliers_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/loading"
+                        android:textAlignment="center"
+                        android:textColor="@color/mainTextColor"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:onClick="goToManageSuppliers"
+                        android:text="@string/manageSuppliers"
+                        android:textColor="@color/mainTextColor" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:strokeColor="@color/divider"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBackground"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/unpaidExpenses"
+                        android:textAlignment="center"
+                        android:textColor="@color/mainTextColor"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/expensesAmount"
+                        android:textAlignment="center"
+                        android:textColor="@color/mainTextColor"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="@string/viewExpenses"
+                        android:textColor="@color/mainTextColor" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="goToRecordNewSale"
+                    android:text="@string/recordNewSale"
+                    android:textColor="@color/mainTextColor" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manageTransactions"
+                    android:textColor="@color/mainTextColor" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/viewStatistics"
+                    android:textColor="@color/mainTextColor" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/bottom_navigation_layout" />
+
+</LinearLayout>

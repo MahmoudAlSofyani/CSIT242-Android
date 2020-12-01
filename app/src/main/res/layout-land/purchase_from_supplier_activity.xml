@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/purchase_from_supplier_supplierName_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/supplierName"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/purchaseFromSupplier"
+        android:textSize="20sp" />
+
+    <ScrollView
+        style="@android:style/Widget.Material.ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scrollbarStyle="insideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/purchase_from_supplier_listView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="20dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/totalQty"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/purchase_from_supplier_totalqty_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/priceBreakdown"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/subtotal"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/purchase_from_supplier_subtotal_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/vat"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/purchase_from_supplier_VAT_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/totalDue"
+                    android:textSize="25sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/purchase_from_supplier_total_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submitTransaction"
+        android:onClick="submitTransaction"
+        android:textColor="@color/mainTextColor"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <include layout="@layout/bottom_navigation_layout" />
+
+</LinearLayout>
