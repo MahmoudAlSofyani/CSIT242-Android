@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,8 +20,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import Adapters.TransactionsAdapter;
 import Models.Transaction;
 
 public class ManageTransactions extends AppCompatActivity {
@@ -30,6 +33,8 @@ public class ManageTransactions extends AppCompatActivity {
     int numOfSuppliers;
     Context context = ManageTransactions.this;
     List<DocumentSnapshot> transactionItem;
+    ListView transactionsList;
+    TransactionsAdapter transactionsAdapter;
 
 
 
@@ -44,6 +49,8 @@ public class ManageTransactions extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         bottomNavigationView.setSelectedItemId(R.id.bottomNavigation_menu_transactions);
+
+        transactionsList = findViewById(R.id.manageTransactionsActivity_transactionList_ListView);
 
         getTransactions();
     }
@@ -84,11 +91,15 @@ public class ManageTransactions extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()) {
+                    ArrayList<Transaction> transactionArrayList = new ArrayList<>();
+
                     for (QueryDocumentSnapshot documentSnapshot : task.getResult()) {
 
                        Transaction transaction = documentSnapshot.toObject(Transaction.class);
-                       displayStuff(transaction);
 
+                        transactionArrayList.add(new Transaction(transaction.getSupplierName(), transaction.getTimestamp(), transaction.getTotalDue(), transaction.getItems()));
+                        transactionsAdapter = new TransactionsAdapter(ManageTransactions.this, transactionArrayList);
+                        transactionsList.setAdapter(transactionsAdapter);
                     }
                 } else {
                     System.out.println("There was an error");
@@ -96,17 +107,4 @@ public class ManageTransactions extends AppCompatActivity {
             }
         });
     }
-
-    public void displayStuff(Transaction transaction) {
-        System.out.println(transaction);
-
-        System.out.println(transaction.getSupplierName());
-        System.out.println(transaction.getTimestamp());
-        System.out.println(transaction.getTotalDue());
-        for(int i = 0; i < transaction.getItems().size(); i++) {
-            System.out.println(transaction.getItems().get("Pixel 5"));
-        }
-    }
-
-    // TODO: Make custom list adapter to show transactions
 }

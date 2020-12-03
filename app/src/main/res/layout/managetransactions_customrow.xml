@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/managetransactionsActivity_supplierName_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainTextColor"
+        android:text="Google"
+        android:textSize="15sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/managetransactionsActivity_totalDue_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10000"
+        android:textColor="@color/mainTextColor"
+        android:textSize="15sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/managetransactionsActivity_timestamp_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="today"
+        android:textColor="@color/mainTextColor"
+        android:textSize="15sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/managetransactionsActivity_item1_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/mainTextColor"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"/>
+
+
+</LinearLayout>

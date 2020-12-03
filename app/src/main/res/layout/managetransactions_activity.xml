@@ -14,6 +14,12 @@
         android:layout_marginTop="15dp"
         android:textAlignment="center"/>
 
+    <ListView
+        android:id="@+id/manageTransactionsActivity_transactionList_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+
+
     <include layout="@layout/bottom_navigation_layout" />
 
 </LinearLayout>
