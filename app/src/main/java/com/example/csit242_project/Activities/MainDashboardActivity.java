@@ -94,7 +94,7 @@ public class MainDashboardActivity extends AppCompatActivity {
     }
 
     public void goToRecordNewSale(View view) {
-        Intent intent = new Intent(this, newSale.class);
+        Intent intent = new Intent(this, ManageSales.class);
         startActivity(intent);
     }
 }

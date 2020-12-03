@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".Activities.newSale">
+    tools:context=".Activities.ManageSales">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
@@ -26,12 +26,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="294dp"
+        android:layout_height="600dp"
         android:layout_marginTop="61dp">
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            />
     </RelativeLayout>
     <include layout="@layout/bottom_navigation_layout" />
 </RelativeLayout>

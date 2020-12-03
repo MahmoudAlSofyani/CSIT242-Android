@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.csit242_project.R;
 
-public class newSale extends AppCompatActivity {
+public class ManageSales extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_sale);
+        setContentView(R.layout.view_sales_activity);
     }
 }

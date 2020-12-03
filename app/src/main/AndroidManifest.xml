@@ -16,7 +16,7 @@
         <activity android:name=".Activities.ManageTransactions" />
         <activity android:name=".Activities.StatisticsActivity"/>
         <activity android:name=".Activities.ExpensesActivity"/>
-        <activity android:name=".Activities.newSale"/>
+        <activity android:name=".Activities.ManageSales"/>
         <activity android:name=".Activities.AddNewSupplier"/>
         <activity android:name=".Activities.PurchaseFromSupplier"/>
         <activity android:name=".Activities.LoginActivity">
