@@ -15,6 +15,7 @@ public class SupplierModel implements Serializable {
     private String modelName;
     private List<String> modelColors = null;
     private List<String> modelCapacities = null;
+    private String msrp;
 
     public SupplierModel() {
     }
@@ -24,6 +25,14 @@ public class SupplierModel implements Serializable {
         this.modelName = modelName;
         this.modelColors = modelColors;
         this.modelCapacities = modelCapacities;
+    }
+
+    public SupplierModel(String modelName, List<String> modelColors, List<String> modelCapacities, String msrp) {
+        super();
+        this.modelName = modelName;
+        this.modelColors = modelColors;
+        this.modelCapacities = modelCapacities;
+        this.msrp = msrp;
     }
 
     public String getModelName() {
@@ -49,6 +58,9 @@ public class SupplierModel implements Serializable {
     public void setModelCapacities(List<String> modelCapacities) {
         this.modelCapacities = modelCapacities;
     }
+
+    public String getMsrp() {return msrp;}
+    public void setMsrp(String msrp) {this.msrp = msrp;}
 
 
 }

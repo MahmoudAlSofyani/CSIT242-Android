@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainTextColor"
+        android:textSize="25sp"
+        android:text="@string/addNewSale"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="gravity"/>
+
+    <Spinner
+        android:id="@+id/addNewSaleActivity_supplierName_Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp" />
+
+    <Spinner
+        android:id="@+id/addNewSaleActivity_modelName_Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/addNewSaleActivity_itemQty_EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Qty"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/addNewSaleActivity_msrp_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="MRSP/Item"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/addNewSaleActivity_discount_EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Discount %"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/totalQty"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addNewSaleActivity_totalQty_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="hello"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/subtotal"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addNewSaleActivity_subtotal_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="hello"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Discount Applied"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addNewSaleActivity_totalDiscount_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="hello"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/vat"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addNewSaleActivity_totalVAT_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="hello"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/totalDue"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addNewSaleActivity_totalDue_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="hello"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:onClick="calculateClicked"
+        android:textColor="#ffffff"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Execute Sale"
+        android:onClick="executeSale"
+        android:textColor="#ffffff"/>
+</LinearLayout>

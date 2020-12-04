@@ -53,4 +53,5 @@
     <string name="suppliers">Suppliers</string>
     <string name="amountOfSales">Amount of Sales</string>
     <string name="lastMonthStatistics">Last Month\'s Statistics</string>
+    <string name="addNewSale">Add New Sale</string>
 </resources>
