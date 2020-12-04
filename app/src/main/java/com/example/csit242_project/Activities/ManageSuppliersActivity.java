@@ -40,7 +40,6 @@ public class ManageSuppliersActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         setContentView(R.layout.managesuppliers_activity);
 
-        System.out.println("onCreate Called");
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
@@ -66,7 +65,6 @@ public class ManageSuppliersActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        System.out.println("onStart Called");
         getListOfSuppliers();
     }
 
