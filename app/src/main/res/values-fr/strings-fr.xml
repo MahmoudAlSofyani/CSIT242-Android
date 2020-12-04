@@ -54,4 +54,5 @@
     <string name="suppliers">Le Fournisseur</string>
     <string name="amountOfSales">Montant des Ventes</string>
     <string name="lastMonthStatistics">Statistiques du Mois Dernier</string>
+    <string name="addNewSale">Ajouter une nouvelle vente</string>
 </resources>

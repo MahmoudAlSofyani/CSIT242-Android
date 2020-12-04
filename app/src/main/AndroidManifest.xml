@@ -19,6 +19,7 @@
         <activity android:name=".Activities.ManageSales"/>
         <activity android:name=".Activities.AddNewSupplier"/>
         <activity android:name=".Activities.PurchaseFromSupplier"/>
+        <activity android:name=".Activities.AddNewSaleActivity"/>
         <activity android:name=".Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
