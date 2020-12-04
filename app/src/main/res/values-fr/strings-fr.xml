@@ -24,9 +24,9 @@
     <string name="numberOfSuppliers">Nombre de Fournisseurs</string>
     <string name="overviewOfShop">Aperçu de la Boutique</string>
     <string name="manageSuppliers">Gérer les Fournisseurs</string>
-    <string name="unpaidExpenses">Dépenses Impayées</string>
+    <string name="totalRevenue">Dépenses Impayées</string>
     <string name="expensesAmount">AED 69,420</string>
-    <string name="viewExpenses">Voir les Dépenses</string>
+    <string name="viewSales">Voir les Dépenses</string>
     <string name="recordNewSale">Nouvelle Vente Record</string>
     <string name="manageTransactions">Gérer les Transactions</string>
     <string name="viewStatistics">Voir les Statistiques</string>

@@ -14,13 +14,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class MainDashboardActivity extends AppCompatActivity {
 
     FirebaseFirestore db;
     TextView numSuppliers_TextView;
+    TextView totalRevenue_TextView;
     int numOfSuppliers;
     BottomNavigationView bottomNavigationView;
     Context context = MainDashboardActivity.this;
@@ -32,6 +35,7 @@ public class MainDashboardActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         numSuppliers_TextView = findViewById(R.id.maindashboardActivity_numSuppliers_TextView);
+        totalRevenue_TextView = findViewById(R.id.maindashboardActivity_totalRevenue_TextView);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
@@ -39,6 +43,7 @@ public class MainDashboardActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.bottomNavigation_menu_home);
 
         getSupplierCount();
+        getSalesCount();
     }
 
     BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -87,6 +92,24 @@ public class MainDashboardActivity extends AppCompatActivity {
         });
     }
 
+    public void getSalesCount() {
+
+        final String[] totalSales = {""};
+        db.collection("sales").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
+                    for(QueryDocumentSnapshot documentSnapshot : task.getResult()) {
+                        System.out.println(documentSnapshot.get("totalDue"));
+                        totalSales[0] += documentSnapshot.get("totalDue");
+                    }
+                }
+                totalRevenue_TextView.setText(totalSales[0]);
+
+            }
+        });
+    }
+
     public void goToManageSuppliers(View view) {
         Intent intent = new Intent(this, ManageSuppliersActivity.class);
         intent.putExtra("NUM_SUPPLIERS", numOfSuppliers);
@@ -95,6 +118,16 @@ public class MainDashboardActivity extends AppCompatActivity {
 
     public void goToRecordNewSale(View view) {
         Intent intent = new Intent(this, AddNewSaleActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToManageTransactions(View view) {
+        Intent intent = new Intent(this, ManageTransactions.class);
+        startActivity(intent);
+    }
+
+    public void goToStatistics(View view) {
+        Intent intent = new Intent(this, StatisticsActivity.class);
         startActivity(intent);
     }
 }

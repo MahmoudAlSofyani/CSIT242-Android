@@ -23,9 +23,9 @@
     <string name="numberOfSuppliers">Number of Suppliers</string>
     <string name="overviewOfShop">Overview of Shop</string>
     <string name="manageSuppliers">Manage Suppliers</string>
-    <string name="unpaidExpenses">Unpaid Expenses</string>
+    <string name="totalRevenue">Total Revenue</string>
     <string name="expensesAmount">AED 69,420</string>
-    <string name="viewExpenses">View Expenses</string>
+    <string name="viewSales">View Sales</string>
     <string name="recordNewSale">Record New Sale</string>
     <string name="manageTransactions">Manage Transactions</string>
     <string name="viewStatistics">View Statistics</string>

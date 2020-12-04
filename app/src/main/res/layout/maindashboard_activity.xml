@@ -76,16 +76,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="@string/unpaidExpenses"
+                android:text="@string/totalRevenue"
                 android:textAlignment="center"
                 android:textColor="@color/mainTextColor"
                 android:textSize="15sp" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/maindashboardActivity_totalRevenue_TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="@string/expensesAmount"
+                android:text="@string/loading"
                 android:textAlignment="center"
                 android:textColor="@color/mainTextColor"
                 android:textSize="20sp" />
@@ -96,7 +97,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/viewExpenses"
+                android:text="@string/viewSales"
                 android:textColor="@color/mainTextColor" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -118,16 +119,17 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="goToManageTransactions"
             android:text="@string/manageTransactions"
             android:textColor="@color/mainTextColor" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="goToStatistics"
             android:text="@string/viewStatistics"
             android:textColor="@color/mainTextColor" />
     </LinearLayout>
-
     <include layout="@layout/bottom_navigation_layout" />
 
 </LinearLayout>
