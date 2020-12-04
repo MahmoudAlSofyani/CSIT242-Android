@@ -201,7 +201,6 @@ public class PurchaseFromSupplier extends AppCompatActivity {
         googleModelTransaction.put("Pixel 4a", 0);
         googleModelTransaction.put("Pixel 4a 5G", 0);
 
-        System.out.println("Model count: " + modelCount.size() + " " + modelCount.get(0));
 
         for(int i = 0; i < modelCount.size(); i++) {
 

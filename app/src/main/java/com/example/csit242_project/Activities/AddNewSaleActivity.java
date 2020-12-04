@@ -184,8 +184,6 @@ public class AddNewSaleActivity extends AppCompatActivity {
 
         String timestamp = dateTimeFormatter.format(now);
 
-        System.out.println(timestamp);
-
         db.collection("sales").document(timestamp).set(sale).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
