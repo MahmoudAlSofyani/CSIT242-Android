@@ -1,5 +1,9 @@
 # CSIT242 Project
 
+This project was built for CSIT242. 
+It is a shop management application written in native Android.
+Team of 3.
+
 ## Functionality
 
 ### Suppliers
