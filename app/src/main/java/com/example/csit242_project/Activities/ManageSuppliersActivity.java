@@ -73,11 +73,6 @@ public class ManageSuppliersActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
             switch(item.getItemId()) {
-                case R.id.bottomNavigation_menu_expenses: {
-                    Intent intent = new Intent(context, ExpensesActivity.class);
-                    startActivity(intent);
-                    break;
-                }
                 case R.id.bottomNavigation_menu_home: {
                     Intent intent = new Intent(context, MainDashboardActivity.class);
                     startActivity(intent);

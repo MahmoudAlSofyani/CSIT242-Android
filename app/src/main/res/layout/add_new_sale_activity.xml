@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:orientation="vertical">
+    android:layout_height="match_parent" android:orientation="vertical" android:background="#000000">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
         android:id="@+id/addNewSaleActivity_modelName_Spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"/>
 
@@ -33,26 +34,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Qty"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"/>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/addNewSaleActivity_msrp_TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="MRSP/Item"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/addNewSaleActivity_discount_EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Discount %"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
@@ -69,6 +76,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
         android:orientation="horizontal">
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
@@ -86,6 +96,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
@@ -102,6 +115,9 @@
     <LinearLayout
         android:layout_width="match_parent"
     android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
     android:orientation="horizontal">
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
@@ -118,6 +134,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
@@ -135,12 +154,17 @@
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
         android:text="Calculate"
         android:onClick="calculateClicked"
         android:textColor="#ffffff"/>
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
         android:text="Execute Sale"
         android:onClick="executeSale"
         android:textColor="#ffffff"/>

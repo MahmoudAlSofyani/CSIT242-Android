@@ -42,21 +42,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="@string/totalStatistics"
-                    android:textAlignment="center"
-                    android:textColor="@color/mainTextColor"
-                    android:textSize="22sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
                     android:text="Total Revenue"
                     android:textAlignment="center"
                     android:textColor="@color/mainTextColor"
                     android:textSize="15sp" />
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/statisticsActivity_totalRevenue_TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -75,6 +67,7 @@
                     android:textSize="15sp" />
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/statisticsActivity_totalInvoices_TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -93,89 +86,11 @@
                     android:textSize="15sp" />
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/statisticsActivity_itemsSold_TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="1,435,284"
-                    android:textAlignment="center"
-                    android:textColor="@color/mainTextColor"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            app:strokeColor="@color/divider"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/lightBackground"
-                android:orientation="vertical">
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Last Month's Statistics"
-                    android:textAlignment="center"
-                    android:textColor="@color/mainTextColor"
-                    android:textSize="22sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Total Revenue"
-                    android:textAlignment="center"
-                    android:textColor="@color/mainTextColor"
-                    android:textSize="15sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="913,843 AED"
-                    android:textAlignment="center"
-                    android:textColor="@color/mainTextColor"
-                    android:textSize="20sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Total Invoices"
-                    android:textAlignment="center"
-                    android:textColor="@color/mainTextColor"
-                    android:textSize="15sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="30,423"
-                    android:textAlignment="center"
-                    android:textColor="@color/mainTextColor"
-                    android:textSize="20sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="# of items sold"
-                    android:textAlignment="center"
-                    android:textColor="@color/mainTextColor"
-                    android:textSize="15sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="54,354"
                     android:textAlignment="center"
                     android:textColor="@color/mainTextColor"
                     android:textSize="20sp" />

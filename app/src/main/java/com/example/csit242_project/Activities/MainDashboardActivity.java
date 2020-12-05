@@ -50,11 +50,6 @@ public class MainDashboardActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch(item.getItemId()) {
-                case R.id.bottomNavigation_menu_expenses: {
-                   Intent intent = new Intent(context, ExpensesActivity.class);
-                   startActivity(intent);
-                    break;
-                }
                 case R.id.bottomNavigation_menu_statistics: {
                     Intent intent = new Intent(context, StatisticsActivity.class);
                     startActivity(intent);
@@ -94,18 +89,17 @@ public class MainDashboardActivity extends AppCompatActivity {
 
     public void getSalesCount() {
 
-        final String[] totalSales = {""};
+        final double[] totalSales = {0};
         db.collection("sales").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()){
                     for(QueryDocumentSnapshot documentSnapshot : task.getResult()) {
                         System.out.println(documentSnapshot.get("totalDue"));
-                        totalSales[0] += documentSnapshot.get("totalDue");
+                        totalSales[0] += Double.parseDouble(documentSnapshot.get("totalDue").toString());
                     }
                 }
-                totalRevenue_TextView.setText(totalSales[0]);
-
+                totalRevenue_TextView.setText(String.valueOf(totalSales[0]));
             }
         });
     }
